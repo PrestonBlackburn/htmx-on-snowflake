@@ -1,6 +1,6 @@
 # HTMX + Snowflake App Example
 
-A streamlit killing match made in derp
+We've all been waiting for it.
 
 ## Overview
 Overal App Structure
@@ -38,9 +38,18 @@ project/
 │   ├── models/             # Database models
 │   ├── services/           # Business logic
 │   ├── utils/              # Utility functions
+│   ├── deployment/         # Sf Native app deployement
+│   |   ├── app/            # The main native app scripts
+│   |   ├── setup/          # some pre-reqs for deployment
 ```
 
-## Setup
+## Local Testing
+
+### Testing Docker
+```bash
+docker build --no-cache -t chat_with_data:latest . --progress=plain
+docker run --rm -p 8000:8000 --env-file=.env chat_with_data:latest
+```
 
 ### FastAPI
 Install requirements
