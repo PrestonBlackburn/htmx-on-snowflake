@@ -1,0 +1,8 @@
+*.ps1
+*.env
+*.p8
+*.pub
+**/__pycache__/**
+
+tailwind_build/node_modules/**
+tailwind_build/package-lock.json

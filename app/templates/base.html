@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='shortcut icon' type='image/x-icon' href='/static/images/sf_logo.png' />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <!-- Htmx -->
+    <script src="/static/js/htmx.min.js"></script>
+
+</head>
+<body>
+    <div class="min-h-screen">
+        <header>
+            {% include 'components/navbar.html' %}
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            {% include 'components/footer.html' %}
+        </footer>
+    </div>
+</body>
+</html>

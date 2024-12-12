@@ -1,0 +1,20 @@
+definition_version: 2
+entities:
+   na_spcs_tutorial_pkg:
+      type: application package
+      manifest: app/manifest.yml
+      artifacts:
+         - src: deployment/app/*
+           dest: ./
+         - deployment/sf_app_spec.yaml
+      meta:
+         role: tutorial_role
+         warehouse: tutorial_warehouse
+   na_spcs_tutorial_app:
+      type: application
+      from:
+         target: na_spcs_tutorial_pkg
+      debug: false
+      meta:
+         role: tutorial_role
+         warehouse: tutorial_warehouse
